@@ -1,8 +1,10 @@
 {
-  "name": "table_chart",
+  "name": "project",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "npm-run-all --parallel json-server serve",
+    "json-server": "json-server --watch db.json --port 5000 & npm run serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
@@ -11,8 +13,14 @@
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
     "bootstrap-vue": "^2.15.0",
+    "chart.js": "^2.9.3",
     "core-js": "^3.6.5",
+    "json-server": "^0.16.1",
+    "moment": "^2.27.0",
+    "npm-run-all": "^4.1.5",
     "vue": "^2.6.11",
+    "vue-axios": "^2.1.5",
+    "vue-chartjs": "^3.5.0",
     "vue-router": "^3.2.0",
     "vue-tables-2": "^2.0.31",
     "vuex": "^3.4.0"
@@ -24,7 +32,6 @@
     "@vue/cli-plugin-vuex": "~4.4.0",
     "@vue/cli-service": "~4.4.0",
     "@vue/eslint-config-prettier": "^6.0.0",
-    "axios": "^0.19.2",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.1.3",
